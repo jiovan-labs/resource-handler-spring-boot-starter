@@ -1,3 +1,5 @@
+[English](README.md) | [简体中文](README.zh-CN.md) | [繁體中文](README.zh-TW.md)
+
 # Resource Handler Spring Boot Starter
 
 Spring Boot application integrates rate limitation quickly, to prevent too frequent accesses.
