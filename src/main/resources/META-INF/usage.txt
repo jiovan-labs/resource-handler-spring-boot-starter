@@ -1,9 +1,9 @@
 # Resource Handler for Spring Boot Starter
-# Copyright (c) 2022 Unikue Ltd. All rights reserved.
-# https://unikue.cn
+# Copyright (c) 2022 Jiovan Ltd. All rights reserved.
+# https://jiovan.com
 
 
-spring:
+jiovan:
     resource-handler:
         resource-mapping:
             versional:

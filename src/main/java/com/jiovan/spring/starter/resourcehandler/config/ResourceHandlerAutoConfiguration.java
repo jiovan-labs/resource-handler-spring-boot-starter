@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2022 Unikue Ltd. All rights reserved.
+ * Copyright (c) 2022 Jiovan Ltd. All rights reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package cn.unikue.springstarter.resourcehandler.config;
+package com.jiovan.spring.starter.resourcehandler.config;
 
 
 import java.util.HashSet;
@@ -30,7 +30,7 @@ import org.springframework.boot.autoconfigure.AutoConfigureAfter;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnBooleanProperty;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplication;
 import org.springframework.boot.autoconfigure.web.WebProperties;
-import org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration;
+import org.springframework.boot.webmvc.autoconfigure.WebMvcAutoConfiguration;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Configuration;
@@ -41,14 +41,14 @@ import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistra
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
-import cn.unikue.commonplexus.javaseutil.constant.CharVariantConst;
-import cn.unikue.commonplexus.javaseutil.constant.StringVariantConst;
-import cn.unikue.commonplexus.javaseutil.util.FilenamePlainWraps;
-import cn.unikue.commonplexus.javaseutil.util.MapPlainWraps;
-import cn.unikue.commonplexus.javaseutil.util.StringUtilsWraps;
-import cn.unikue.commonplexus.springutil.constant.AntPathConst;
-import cn.unikue.commonplexus.springutil.util.ResourceConfigWraps;
-import cn.unikue.springstarter.resourcehandler.property.ResourceHandlerProperties;
+import com.jiovan.plexus.common.toolkit.constant.CharVariantConst;
+import com.jiovan.plexus.common.toolkit.constant.StringVariantConst;
+import com.jiovan.plexus.common.toolkit.util.FilenamePlainWraps;
+import com.jiovan.plexus.common.toolkit.util.MapPlainWraps;
+import com.jiovan.plexus.common.toolkit.util.StringUtilsWraps;
+import com.jiovan.plexus.spring.toolkit.constant.AntPathConst;
+import com.jiovan.plexus.spring.toolkit.util.ResourceConfigWraps;
+import com.jiovan.spring.starter.resourcehandler.property.ResourceHandlerProperties;
 import lombok.RequiredArgsConstructor;
 
 
@@ -56,9 +56,10 @@ import lombok.RequiredArgsConstructor;
  * Configuration for resource handlers and mappings
  *
  * @author David Hsing
- * @reference "http://blog.csdn.net/isea533/article/details/50412212"
- * @reference "http://blog.csdn.net/catoop/article/details/50501706"
- * @see org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration
+ *
+ * @see "http://blog.csdn.net/isea533/article/details/50412212"
+ * @see "http://blog.csdn.net/catoop/article/details/50501706"
+ * @see org.springframework.boot.webmvc.autoconfigure.WebMvcAutoConfiguration
  * @see org.springframework.web.servlet.handler.SimpleUrlHandlerMapping
  * @see org.springframework.web.servlet.config.annotation.ResourceChainRegistration
  * @see org.springframework.web.servlet.config.annotation.ResourceHandlerRegistration
@@ -69,9 +70,8 @@ import lombok.RequiredArgsConstructor;
 @AutoConfigureAfter(value = WebMvcAutoConfiguration.class)
 @RequiredArgsConstructor
 @EnableConfigurationProperties(value = ResourceHandlerProperties.class)
-@SuppressWarnings({"JavadocDeclaration", "JavadocLinkAsPlainText"})
 public class ResourceHandlerAutoConfiguration implements InitializingBean, WebMvcConfigurer {
-    public static final String PROPERTIES_PREFIX = "spring.resource-handler";    // $NON-NLS-1$
+    public static final String PROPERTIES_PREFIX = "jiovan.resource-handler";    // $NON-NLS-1$
     private final ApplicationContext applicationContext;
     private final WebProperties webProperties;
     private final ResourceHandlerProperties handlerProperties;

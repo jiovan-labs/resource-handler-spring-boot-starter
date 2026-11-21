@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2022 Unikue Ltd. All rights reserved.
+ * Copyright (c) 2022 Jiovan Ltd. All rights reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,17 +14,17 @@
  * limitations under the License.
  */
 
-package cn.unikue.springstarter.resourcehandler.property;
+package com.jiovan.spring.starter.resourcehandler.property;
 
 
 import java.io.Serializable;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import org.springframework.boot.context.properties.ConfigurationProperties;
-import cn.unikue.commonplexus.javaseutil.constant.CharVariantConst;
-import cn.unikue.commonplexus.javaseutil.constant.StringVariantConst;
-import cn.unikue.commonplexus.springutil.constant.AntPathConst;
-import cn.unikue.springstarter.resourcehandler.config.ResourceHandlerAutoConfiguration;
+import com.jiovan.plexus.common.toolkit.constant.CharVariantConst;
+import com.jiovan.plexus.common.toolkit.constant.StringVariantConst;
+import com.jiovan.plexus.spring.toolkit.constant.AntPathConst;
+import com.jiovan.spring.starter.resourcehandler.config.ResourceHandlerAutoConfiguration;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;

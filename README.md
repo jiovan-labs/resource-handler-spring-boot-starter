@@ -8,18 +8,18 @@ Spring Boot application integrates rate limitation quickly, to prevent too frequ
 
 ```xml
     <dependency>
-        <groupId>cn.unikue.springstarter</groupId>
+        <groupId>com.jiovan.spring.starter</groupId>
         <artifactId>resource-handler-spring-boot-starter</artifactId>
         <version>LATEST</version>
     </dependency>
 ```
 
-> By default, this starter will auto take effect, you can turn it off by `spring.resource-handler.enabled = false`
+> By default, this starter will auto take effect, you can turn it off by `jiovan.resource-handler.enabled = false`
 
-- Configure Spring Boot `application.yml` with prefix `spring.resource-handler` (**Optional**)
+- Configure Spring Boot `application.yml` with prefix `jiovan.resource-handler` (**Optional**)
 
 ```yml
-spring:
+jiovan:
     resource-handler:
         resource-mapping:
             add-default-versional: true
@@ -46,7 +46,7 @@ spring:
 
 ## Document
 
-- Github: https://github.com/unikueltd/resource-handler-spring-boot-starter
+- Github: https://github.com/jiovan-labs/resource-handler-spring-boot-starter
 
 ## Requirement
 
@@ -60,12 +60,12 @@ See the `NOTICE.txt` file for required notices and attributions.
 
 ## Donation
 
-You like this package? Then [donate to us](https://unikue.cn/donation) to support the development.
+You like this package? Then [donate to us](https://jiovan.com/donation) to support the development.
 
 ## Copyright
 
-Beijing Unikue Network Technology Ltd.
+Beijing Jiovan Technology Ltd.
 
 ## Website
 
-- Unikue: https://unikue.cn
+- Jiovan: https://jiovan.com
